@@ -1,0 +1,119 @@
+2025-09-27 23:03:40,212 DEBUG cd frappe-bench && python3 -m venv env
+2025-09-27 23:03:43,818 DEBUG cd frappe-bench && /Users/user/Documents/resturantOS/frappe-bench/env/bin/python -m pip install --quiet --upgrade pip
+2025-09-27 23:03:46,750 DEBUG cd frappe-bench && /Users/user/Documents/resturantOS/frappe-bench/env/bin/python -m pip install --quiet wheel
+2025-09-27 23:03:49,449 LOG Getting frappe
+2025-09-27 23:03:49,450 DEBUG cd frappe-bench/apps && git clone https://github.com/frappe/frappe.git  --depth 1 --origin upstream
+2025-09-27 23:04:24,644 LOG Installing frappe
+2025-09-27 23:04:25,474 DEBUG cd /Users/user/Documents/resturantOS/frappe-bench && /Users/user/Documents/resturantOS/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /Users/user/Documents/resturantOS/frappe-bench/apps/frappe 
+2025-09-27 23:06:03,267 DEBUG cd /Users/user/Documents/resturantOS/frappe-bench/apps/frappe && yarn install --check-files
+2025-09-27 23:06:16,739 DEBUG cd frappe-bench && bench build
+2025-09-27 23:06:17,722 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench build
+2025-09-27 23:06:47,848 LOG setting up backups
+2025-09-27 23:06:48,040 LOG backups were set up
+2025-09-27 23:06:48,041 INFO Bench frappe-bench initialized
+2025-09-27 23:07:12,152 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench start
+2025-09-27 23:09:37,322 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench new-site erpnext.localhost
+2025-09-27 23:10:39,783 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --site erpnext.localhost install-app erpnext
+2025-09-27 23:11:09,610 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench get-app https://github.com/frappe/erpnext
+2025-09-27 23:11:09,916 LOG Getting erpnext
+2025-09-27 23:11:09,916 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext  --depth 1 --origin upstream
+2025-09-27 23:11:23,339 LOG Installing erpnext
+2025-09-27 23:11:23,340 DEBUG cd /Users/user/Documents/resturantOS/frappe-bench && /Users/user/Documents/resturantOS/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /Users/user/Documents/resturantOS/frappe-bench/apps/erpnext 
+2025-09-27 23:12:02,437 DEBUG cd /Users/user/Documents/resturantOS/frappe-bench/apps/erpnext && yarn install --check-files
+2025-09-27 23:12:03,633 DEBUG bench build --app erpnext
+2025-09-27 23:12:04,532 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench build --app erpnext
+2025-09-27 23:12:21,382 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --site erpnext.localhost install-app erpnext
+2025-09-27 23:14:22,447 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --site resturant.localhost add-to-hosts
+2025-09-27 23:20:26,846 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench start
+2025-09-27 23:20:29,443 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench schedule
+2025-09-27 23:20:29,450 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench serve --port 8000
+2025-09-27 23:20:29,453 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench watch
+2025-09-27 23:20:29,471 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench worker
+2025-09-27 23:39:37,867 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench restart
+2025-09-27 23:40:36,149 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench start
+2025-09-27 23:40:38,840 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench schedule
+2025-09-27 23:40:38,840 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench worker
+2025-09-27 23:40:38,840 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench serve --port 8000
+2025-09-27 23:40:38,841 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench watch
+2025-09-28 00:00:03,082 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --verbose --site all backup
+2025-09-28 00:21:42,520 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench start
+2025-09-28 00:21:45,302 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench watch
+2025-09-28 00:21:45,304 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench schedule
+2025-09-28 00:21:45,310 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench serve --port 8000
+2025-09-28 00:21:45,324 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench worker
+2025-09-28 00:23:07,754 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench new-site resturant.localhost
+2025-09-28 00:24:28,806 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --site library.localhost add-to-hosts
+2025-09-28 00:24:40,734 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --site resturant.localhost add-to-hosts
+2025-09-28 00:48:54,498 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench start
+2025-09-28 00:48:55,438 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench new-site hrms.local
+2025-09-28 00:48:59,310 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench serve --port 8000
+2025-09-28 00:48:59,319 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench worker
+2025-09-28 00:48:59,336 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench watch
+2025-09-28 00:48:59,415 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench schedule
+2025-09-28 00:51:47,191 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench get-app hrms
+2025-09-28 00:51:49,210 LOG Getting hrms
+2025-09-28 00:51:49,211 DEBUG cd ./apps && git clone https://github.com/frappe/hrms.git  --depth 1 --origin upstream
+2025-09-28 00:51:57,825 LOG Installing hrms
+2025-09-28 00:51:57,833 DEBUG cd /Users/user/Documents/resturantOS/frappe-bench && /Users/user/Documents/resturantOS/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /Users/user/Documents/resturantOS/frappe-bench/apps/hrms 
+2025-09-28 00:52:05,694 DEBUG cd /Users/user/Documents/resturantOS/frappe-bench/apps/hrms && yarn install --check-files
+2025-09-28 00:55:52,166 DEBUG bench build --app hrms
+2025-09-28 00:55:53,476 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench build --app hrms
+2025-09-28 00:56:49,709 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --site hrms.local install-app hrms
+2025-09-28 00:59:18,475 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --site hrms.local add-to-hosts
+2025-09-28 01:00:02,833 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench new-site hrms.local
+2025-09-28 01:02:07,899 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench start
+2025-09-28 01:02:11,158 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench watch
+2025-09-28 01:02:11,159 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench schedule
+2025-09-28 01:02:11,168 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench serve --port 8000
+2025-09-28 01:02:11,255 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench worker
+2025-09-28 01:04:29,435 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench get-app education
+2025-09-28 01:04:31,201 LOG Getting education
+2025-09-28 01:04:31,201 DEBUG cd ./apps && git clone https://github.com/frappe/education.git  --depth 1 --origin upstream
+2025-09-28 01:04:38,283 LOG Installing education
+2025-09-28 01:04:38,286 DEBUG cd /Users/user/Documents/resturantOS/frappe-bench && /Users/user/Documents/resturantOS/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /Users/user/Documents/resturantOS/frappe-bench/apps/education 
+2025-09-28 01:04:56,984 DEBUG cd /Users/user/Documents/resturantOS/frappe-bench/apps/education && yarn install --check-files
+2025-09-28 01:05:14,595 DEBUG bench build --app education
+2025-09-28 01:05:15,648 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench build --app education
+2025-09-28 01:05:57,143 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --site hrms.localhost install-app hrms
+2025-09-28 01:06:19,722 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench new-site hrms.localhost
+2025-09-28 01:07:54,977 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --site hrms.localhost add-to-hosts
+2025-09-28 01:09:43,864 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --site hrms.localhost install-app hrms
+2025-09-28 01:14:34,411 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench new-site education.localhost
+2025-09-28 01:16:08,762 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --site education.localhost install-app education
+2025-09-28 01:18:13,579 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --site education.localhost add-to-hosts
+2025-09-28 01:19:09,959 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --site education.localhost install-app education
+2025-09-28 01:19:31,715 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench new-site education.localhost
+2025-09-28 10:10:18,635 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench get-app education
+2025-09-28 10:11:39,517 INFO App moved from apps/education to archived/apps/education-2025-09-28
+2025-09-28 10:11:39,763 LOG Getting education
+2025-09-28 10:11:39,763 DEBUG cd ./apps && git clone https://github.com/frappe/education.git --branch develop --depth 1 --origin upstream
+2025-09-28 10:11:47,665 LOG Installing education
+2025-09-28 10:11:47,666 DEBUG cd /Users/user/Documents/resturantOS/frappe-bench && /Users/user/Documents/resturantOS/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /Users/user/Documents/resturantOS/frappe-bench/apps/education 
+2025-09-28 10:11:59,502 DEBUG cd /Users/user/Documents/resturantOS/frappe-bench/apps/education && yarn install --check-files
+2025-09-28 10:12:36,883 DEBUG bench build --app education
+2025-09-28 10:12:38,095 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench build --app education
+2025-09-28 10:13:13,873 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench start
+2025-09-28 10:13:18,112 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench watch
+2025-09-28 10:13:18,113 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench worker
+2025-09-28 10:13:18,117 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench serve --port 8000
+2025-09-28 10:13:18,172 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench schedule
+2025-09-28 10:14:37,487 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench start
+2025-09-28 10:14:41,808 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench watch
+2025-09-28 10:14:41,810 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench worker
+2025-09-28 10:14:41,865 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench schedule
+2025-09-28 10:14:41,873 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench serve --port 8000
+2025-09-28 10:51:26,962 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench get-app lms
+2025-09-28 10:51:28,772 LOG Getting lms
+2025-09-28 10:51:28,772 DEBUG cd ./apps && git clone https://github.com/frappe/lms.git  --depth 1 --origin upstream
+2025-09-28 10:52:05,584 LOG Installing lms
+2025-09-28 10:52:05,586 DEBUG cd /Users/user/Documents/resturantOS/frappe-bench && /Users/user/Documents/resturantOS/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /Users/user/Documents/resturantOS/frappe-bench/apps/lms 
+2025-09-28 10:52:42,956 DEBUG cd /Users/user/Documents/resturantOS/frappe-bench/apps/lms && yarn install --check-files
+2025-09-28 10:58:20,638 DEBUG bench build --app lms
+2025-09-28 10:58:21,728 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench build --app lms
+2025-09-28 11:00:55,041 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --site education.localhost install-app lms.
+2025-09-28 11:01:04,087 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --site education.localhost install-app lms
+2025-09-28 11:01:36,654 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench start
+2025-09-28 11:01:39,431 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench watch
+2025-09-28 11:01:39,432 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench worker
+2025-09-28 11:01:39,440 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench schedule
+2025-09-28 11:01:39,522 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench serve --port 8000

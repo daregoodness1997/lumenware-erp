@@ -1,0 +1,5 @@
+frappe
+lms
+education
+hrms
+erpnext

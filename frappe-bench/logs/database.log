@@ -1,0 +1,182 @@
+2025-09-28 11:01:17,246 WARNING database DDL Query made to DB:
+create table `tabLMS Live Class Participant` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`live_class` varchar(140),
+`joined_at` datetime(6),
+`duration` int(11) NOT NULL DEFAULT 0,
+`left_at` datetime(6),
+`member` varchar(140),
+`member_name` varchar(140),
+`member_image` text,
+`member_username` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-09-28 11:01:17,366 WARNING database DDL Query made to DB:
+create table `tabCohort Subgroup` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`cohort` varchar(140),
+`slug` varchar(140),
+`title` varchar(140),
+`invite_code` varchar(140),
+`course` varchar(140),
+`description` longtext,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-09-28 11:01:17,498 WARNING database DDL Query made to DB:
+create table `tabLMS Quiz` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`title` varchar(140) UNIQUE,
+`max_attempts` int(11) NOT NULL DEFAULT 0,
+`show_answers` tinyint(4) NOT NULL DEFAULT 1,
+`show_submission_history` tinyint(4) NOT NULL DEFAULT 0,
+`total_marks` int(11) NOT NULL DEFAULT 0,
+`passing_percentage` int(11) NOT NULL DEFAULT 0,
+`duration` varchar(140),
+`shuffle_questions` tinyint(4) NOT NULL DEFAULT 0,
+`limit_questions_to` int(11) NOT NULL DEFAULT 0,
+`enable_negative_marking` tinyint(4) NOT NULL DEFAULT 0,
+`marks_to_cut` int(11) NOT NULL DEFAULT 1,
+`lesson` varchar(140),
+`course` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-09-28 11:01:17,937 WARNING database DDL Query made to DB:
+create table `tabLMS Job Application` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`user` varchar(140),
+`resume` text,
+`job` varchar(140),
+`job_title` varchar(140),
+`company` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-09-28 11:01:18,062 WARNING database DDL Query made to DB:
+create table `tabJob Opportunity` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`job_title` varchar(140),
+`location` varchar(140),
+`country` varchar(140),
+`type` varchar(140) DEFAULT 'Full Time',
+`work_mode` varchar(140),
+`status` varchar(140) DEFAULT 'Open',
+`disabled` tinyint(4) NOT NULL DEFAULT 0,
+`company_name` varchar(140),
+`company_website` varchar(140),
+`company_logo` text,
+`company_email_address` varchar(140),
+`description` longtext,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-09-28 11:01:21,796 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `country` varchar(140)
+2025-09-28 11:01:21,964 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `verify_terms` tinyint(4) NOT NULL DEFAULT 0
+2025-09-28 11:01:22,122 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `user_category` varchar(140)
+2025-09-28 11:01:22,279 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `cover_image` text
+2025-09-28 11:01:22,455 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `looking_for_job` tinyint(4) NOT NULL DEFAULT 0
+2025-09-28 11:01:22,604 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `linkedin` varchar(140)
+2025-09-28 11:01:22,770 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `github` varchar(140)
+2025-09-28 11:01:22,940 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `medium` varchar(140)
+2025-09-28 11:01:23,102 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `profession` varchar(140)
+2025-09-28 11:01:23,259 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `hide_private` tinyint(4) NOT NULL DEFAULT 0
+2025-09-28 11:01:24,437 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `preferred_location` varchar(140)
+2025-09-28 11:01:24,813 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `dream_companies` varchar(140)
+2025-09-28 11:01:25,081 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `attire` varchar(140)
+2025-09-28 11:01:25,267 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `collaboration` varchar(140)
+2025-09-28 11:01:25,416 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `role` varchar(140)
+2025-09-28 11:01:25,657 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `location_preference` varchar(140)
+2025-09-28 11:01:25,821 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `time` varchar(140)
+2025-09-28 11:01:25,993 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `company_type` varchar(140)
+2025-09-28 11:01:26,149 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `headline` varchar(140)
+2025-09-28 11:01:26,321 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `city` varchar(140)
+2025-09-28 11:01:26,493 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `college` varchar(140)
+2025-09-28 11:01:26,671 WARNING database DDL Query made to DB:
+ALTER TABLE `tabUser` ADD COLUMN `branch` varchar(140)

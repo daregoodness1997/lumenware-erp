@@ -1,0 +1,133 @@
+Backup failed for Site erpnext.localhost. Database or site_config.json may be corrupted
+Traceback with variables (most recent call last):
+  File "apps/frappe/frappe/commands/site.py", line 865, in backup
+    odb = scheduled_backup(
+      context = CliCtxObj(force=False, profile=False, sites=['erpnext.localhost'], verbose=True)
+      with_files = False
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_backup_conf = False
+      verbose = True
+      compress = False
+      include = ''
+      exclude = ''
+      old_backup_metadata = False
+      scheduled_backup = <function scheduled_backup at 0x2d05bc360>
+      exit_code = 0
+      rollback_callback = None
+      site = 'erpnext.localhost'
+  File "apps/frappe/frappe/utils/backups.py", line 589, in scheduled_backup
+    return new_backup(
+      older_than = 6
+      ignore_files = True
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_conf = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      compress = False
+      force = True
+      verbose = True
+      old_backup_metadata = False
+      rollback_callback = frappe.utils.CallbackManager()
+  File "apps/frappe/frappe/utils/backups.py", line 647, in new_backup
+    odb.get_backup(older_than, ignore_files, force=force)
+      older_than = 6
+      ignore_files = True
+      backup_path = None
+      backup_path_db = None
+      backup_path_files = None
+      backup_path_private_files = None
+      backup_path_conf = None
+      ignore_conf = False
+      include_doctypes = ''
+      exclude_doctypes = ''
+      compress = False
+      force = True
+      verbose = True
+      old_backup_metadata = False
+      rollback_callback = frappe.utils.CallbackManager()
+      odb = frappe.utils.backups.BackupGenerator(backup_excludes=[], backup_includes=[], backup_path=None, backup_path_conf='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-site_config_backup.json', backup_path_db='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-database.sql.gz', backup_path_files='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-files.tar', backup_path_private_files='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-private-files.tar', compress_files=False, db_host='127.0.0.1', db_name='_9418acfe8bd9c5ee', db_port=3306, db_socket=None, db_type='mariadb', exclude_doctypes='', ignore_conf=False, include_doctypes='', old_backup_metadata=False, partial=[], password='cRBEqSDGz3C4kFym', rollback_callback=frappe.utils.CallbackManager(-), site_slug='erpnext_localhost', todays_date='20250928_043005', user='_9418acfe8bd9c5ee', verbose=True)
+  File "apps/frappe/frappe/utils/backups.py", line 191, in get_backup
+    self.delete_if_step_fails(self.take_dump, self.backup_path_db)
+      self = frappe.utils.backups.BackupGenerator(backup_excludes=[], backup_includes=[], backup_path=None, backup_path_conf='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-site_config_backup.json', backup_path_db='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-database.sql.gz', backup_path_files='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-files.tar', backup_path_private_files='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-private-files.tar', compress_files=False, db_host='127.0.0.1', db_name='_9418acfe8bd9c5ee', db_port=3306, db_socket=None, db_type='mariadb', exclude_doctypes='', ignore_conf=False, include_doctypes='', old_backup_metadata=False, partial=[], password='cRBEqSDGz3C4kFym', rollback_callback=frappe.utils.CallbackManager(-), site_slug='erpnext_localhost', todays_date='20250928_043005', user='_9418acfe8bd9c5ee', verbose=True)
+      older_than = 6
+      ignore_files = True
+      force = True
+      last_db = False
+      last_file = False
+      last_private_file = False
+      site_config_backup_path = False
+  File "apps/frappe/frappe/utils/backups.py", line 528, in delete_if_step_fails
+    raise e
+      self = frappe.utils.backups.BackupGenerator(backup_excludes=[], backup_includes=[], backup_path=None, backup_path_conf='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-site_config_backup.json', backup_path_db='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-database.sql.gz', backup_path_files='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-files.tar', backup_path_private_files='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-private-files.tar', compress_files=False, db_host='127.0.0.1', db_name='_9418acfe8bd9c5ee', db_port=3306, db_socket=None, db_type='mariadb', exclude_doctypes='', ignore_conf=False, include_doctypes='', old_backup_metadata=False, partial=[], password='cRBEqSDGz3C4kFym', rollback_callback=frappe.utils.CallbackManager(-), site_slug='erpnext_localhost', todays_date='20250928_043005', user='_9418acfe8bd9c5ee', verbose=True)
+      step = <bound method BackupGenerator.take_dump of <frappe.utils.backups.BackupGenerator object at 0x2d0728a40>>
+      paths = ('./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-database.sql.gz')
+      path = './erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-database.sql.gz'
+  File "apps/frappe/frappe/utils/backups.py", line 523, in delete_if_step_fails
+    step()
+      self = frappe.utils.backups.BackupGenerator(backup_excludes=[], backup_includes=[], backup_path=None, backup_path_conf='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-site_config_backup.json', backup_path_db='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-database.sql.gz', backup_path_files='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-files.tar', backup_path_private_files='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-private-files.tar', compress_files=False, db_host='127.0.0.1', db_name='_9418acfe8bd9c5ee', db_port=3306, db_socket=None, db_type='mariadb', exclude_doctypes='', ignore_conf=False, include_doctypes='', old_backup_metadata=False, partial=[], password='cRBEqSDGz3C4kFym', rollback_callback=frappe.utils.CallbackManager(-), site_slug='erpnext_localhost', todays_date='20250928_043005', user='_9418acfe8bd9c5ee', verbose=True)
+      step = <bound method BackupGenerator.take_dump of <frappe.utils.backups.BackupGenerator object at 0x2d0728a40>>
+      paths = ('./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-database.sql.gz')
+      path = './erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-database.sql.gz'
+  File "apps/frappe/frappe/utils/backups.py", line 465, in take_dump
+    frappe.throw(
+      self = frappe.utils.backups.BackupGenerator(backup_excludes=[], backup_includes=[], backup_path=None, backup_path_conf='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-site_config_backup.json', backup_path_db='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-database.sql.gz', backup_path_files='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-files.tar', backup_path_private_files='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-private-files.tar', compress_files=False, db_host='127.0.0.1', db_name='_9418acfe8bd9c5ee', db_port=3306, db_socket=None, db_type='mariadb', exclude_doctypes='', ignore_conf=False, include_doctypes='', old_backup_metadata=False, partial=[], password='cRBEqSDGz3C4kFym', rollback_callback=frappe.utils.CallbackManager(-), site_slug='erpnext_localhost', todays_date='20250928_043005', user='_9418acfe8bd9c5ee', verbose=True)
+      frappe = <module 'frappe' from 'apps/frappe/frappe/__init__.py'>
+      shlex = <module 'shlex' from '/usr/local/Cellar/python@3.12/3.12.11_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/shlex.py'>
+      get_app_branch = <function get_app_branch at 0x2d0524b80>
+      gzip_exc = '/usr/bin/gzip'
+      database_header_content = ['begin frappe metadata', '[frappe]', 'version = 16.0.0-dev', 'branch = develop', 'end frappe metadata', '']
+      generated_header = '-- begin frappe metadata
+      -- [frappe]
+      -- version = 16.0.0-dev
+      -- branch = develop
+      -- end frappe metadata
+      -- 
+      '
+      f = <_io.TextIOWrapper name='./erpnext.localhost/private/backups/20250928_043005-erpnext_localhost-database.sql.gz' encoding='UTF-8'>
+      cmd = []
+      extra = []
+      get_command = <function get_command at 0x2cf946160>
+      bin = None
+      args = ['--user=_9418acfe8bd9c5ee', '--host=127.0.0.1', '--port=3306', '--password=cRBEqSDGz3C4kFym', '--single-transaction', '--quick', '--lock-tables=false', '_9418acfe8bd9c5ee']
+      bin_name = 'mariadb-dump'
+  File "apps/frappe/frappe/utils/messages.py", line 145, in throw
+    msgprint(
+      msg = 'mariadb-dump not found in PATH! This is required to take a backup.'
+      exc = frappe.exceptions.ExecutableNotFound
+      title = None
+      is_minimizable = False
+      wide = False
+      as_list = False
+      primary_action = None
+  File "apps/frappe/frappe/utils/messages.py", line 106, in msgprint
+    _raise_exception()
+      msg = 'mariadb-dump not found in PATH! This is required to take a backup.'
+      title = None
+      raise_exception = frappe.exceptions.ExecutableNotFound
+      as_table = False
+      as_list = False
+      indicator = 'red'
+      alert = False
+      primary_action = None
+      is_minimizable = False
+      wide = False
+      realtime = False
+      _raise_exception = <function msgprint.<locals>._raise_exception at 0x2d0776660>
+      inspect = <module 'inspect' from '/usr/local/Cellar/python@3.12/3.12.11_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/inspect.py'>
+      out = {'message': 'mariadb-dump not found in PATH! This is required to take a backup.', 'title': 'Message', 'indicator': 'red', 'raise_exception': 1, '__frappe_exc_id': '09d3296c07dc52fa487af95252252666f05fcec0cc93877acc7811b4'}
+  File "apps/frappe/frappe/utils/messages.py", line 57, in _raise_exception
+    raise exc
+      exc = mariadb-dump not found in PATH! This is required to take a backup.
+      inspect = <module 'inspect' from '/usr/local/Cellar/python@3.12/3.12.11_1/Frameworks/Python.framework/Versions/3.12/lib/python3.12/inspect.py'>
+      msg = 'mariadb-dump not found in PATH! This is required to take a backup.'
+      out = {'message': 'mariadb-dump not found in PATH! This is required to take a backup.', 'title': 'Message', 'indicator': 'red', 'raise_exception': 1, '__frappe_exc_id': '09d3296c07dc52fa487af95252252666f05fcec0cc93877acc7811b4'}
+      raise_exception = frappe.exceptions.ExecutableNotFound
+frappe.exceptions.ExecutableNotFound: mariadb-dump not found in PATH! This is required to take a backup.
