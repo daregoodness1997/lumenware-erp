@@ -117,3 +117,31 @@
 2025-09-28 11:01:39,432 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench worker
 2025-09-28 11:01:39,440 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench schedule
 2025-09-28 11:01:39,522 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench serve --port 8000
+2025-09-28 15:50:59,748 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench get-app payments
+2025-09-28 15:51:01,702 LOG Getting payments
+2025-09-28 15:51:01,703 DEBUG cd ./apps && git clone https://github.com/frappe/payments.git  --depth 1 --origin upstream
+2025-09-28 15:51:05,949 LOG Installing payments
+2025-09-28 15:51:05,949 DEBUG cd /Users/user/Documents/resturantOS/frappe-bench && /Users/user/Documents/resturantOS/frappe-bench/env/bin/python -m pip install --quiet --upgrade -e /Users/user/Documents/resturantOS/frappe-bench/apps/payments 
+2025-09-28 15:51:29,240 DEBUG bench build --app payments
+2025-09-28 15:51:30,222 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench build --app payments
+2025-09-28 15:52:39,219 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench --site education.localhost install-app payments
+2025-09-28 15:53:08,698 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench start
+2025-09-28 15:53:13,082 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench worker
+2025-09-28 15:53:13,096 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench watch
+2025-09-28 15:53:13,100 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench schedule
+2025-09-28 15:53:13,210 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench serve --port 8000
+2025-09-28 15:54:35,677 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench start
+2025-09-28 15:54:39,616 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench serve --port 8000
+2025-09-28 15:54:39,772 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench watch
+2025-09-28 15:54:39,776 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench worker
+2025-09-28 15:54:39,780 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench schedule
+2025-09-28 16:01:31,730 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench start
+2025-09-28 16:01:35,346 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench watch
+2025-09-28 16:01:35,348 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench serve --port 8000
+2025-09-28 16:01:35,441 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench schedule
+2025-09-28 16:01:35,457 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench worker
+2025-09-28 16:18:28,283 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench start
+2025-09-28 16:18:33,072 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench schedule
+2025-09-28 16:18:33,185 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench serve --port 8000
+2025-09-28 16:18:33,187 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench worker
+2025-09-28 16:18:33,191 INFO /Users/user/.cache/uv/archive-v0/eg5tUF0BD9GdSxiwGG6z7/bin/bench watch

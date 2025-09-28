@@ -2571,3 +2571,154 @@ ALTER TABLE `tabUser` ADD COLUMN `city` varchar(140)
 ALTER TABLE `tabUser` ADD COLUMN `college` varchar(140)
 2025-09-28 11:01:26,671 WARNING database DDL Query made to DB:
 ALTER TABLE `tabUser` ADD COLUMN `branch` varchar(140)
+2025-09-28 15:52:42,659 WARNING database DDL Query made to DB:
+create table `tabPayment Gateway` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`gateway` varchar(140) UNIQUE,
+`gateway_settings` varchar(140),
+`gateway_controller` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-09-28 15:52:42,879 WARNING database DDL Query made to DB:
+create table `tabGoCardless Mandate` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`disabled` tinyint(4) NOT NULL DEFAULT 0,
+`mandate` varchar(140) UNIQUE,
+`gocardless_customer` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-09-28 15:52:43,004 WARNING database DDL Query made to DB:
+create table `tabGoCardless Settings` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`gateway_name` varchar(140) UNIQUE,
+`access_token` varchar(140),
+`webhooks_secret` varchar(140),
+`use_sandbox` tinyint(4) NOT NULL DEFAULT 0,
+`header_img` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-09-28 15:52:43,453 WARNING database DDL Query made to DB:
+create table `tabMpesa Settings` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`payment_gateway_name` varchar(140) UNIQUE,
+`consumer_key` varchar(140),
+`consumer_secret` text,
+`initiator_name` varchar(140),
+`till_number` varchar(140),
+`transaction_limit` decimal(21,9) NOT NULL DEFAULT 150000.0,
+`sandbox` tinyint(4) NOT NULL DEFAULT 0,
+`business_shortcode` varchar(140),
+`online_passkey` text,
+`security_credential` text,
+`account_balance` longtext,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-09-28 15:52:43,606 WARNING database DDL Query made to DB:
+create table `tabStripe Settings` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`gateway_name` varchar(140),
+`publishable_key` varchar(140),
+`secret_key` text,
+`header_img` text,
+`redirect_url` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-09-28 15:52:43,866 WARNING database DDL Query made to DB:
+create table `tabBraintree Settings` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`gateway_name` varchar(140),
+`merchant_id` varchar(140),
+`public_key` varchar(140),
+`private_key` text,
+`use_sandbox` tinyint(4) NOT NULL DEFAULT 0,
+`header_img` text,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation),
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-09-28 15:52:48,183 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWeb Form` ADD COLUMN `currency` varchar(140), ADD COLUMN `amount_field` varchar(140), ADD COLUMN `payment_button_help` text, ADD COLUMN `amount_based_on_field` tinyint(4) NOT NULL DEFAULT 0, ADD COLUMN `amount` decimal(21,9) NOT NULL DEFAULT 0.0, ADD COLUMN `payment_gateway` varchar(140), ADD COLUMN `payment_button_label` varchar(140) DEFAULT 'Buy Now', ADD COLUMN `accept_payment` tinyint(4) NOT NULL DEFAULT 0
+2025-09-28 15:52:48,365 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGoCardless Mandate` ADD COLUMN `customer` varchar(140)
